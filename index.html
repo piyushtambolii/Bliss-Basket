@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bliss Basket - From Our Heart To Your Home</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font --><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load an elegant script font for the brand name --><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font for the brand name (Bliss Basket) */
+        .brand-font {
+            font-family: 'Great Vibes', cursive;
+        }
+        /* Setting Inter as the default font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fefcfb; /* Very light, off-white background */
+        }
+        .text-rose-light {
+            color: #d8969f; /* A soft, elegant rose color */
+        }
+        .bg-rose-pale {
+             background-color: #f7e6e9; /* Lightest pink for accents */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Navbar --><nav class="sticky top-0 z-10 bg-white shadow-md p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#home" class="text-3xl brand-font text-rose-light font-bold">Bliss Basket</a>
+            <div class="space-x-4 text-sm font-medium hidden sm:flex">
+                <a href="#about" class="hover:text-rose-light transition duration-300">About Us</a>
+                <a href="#products" class="hover:text-rose-light transition duration-300">Gallery</a>
+                <a href="#contact" class="hover:text-rose-light transition duration-300">Order</a>
+            </div>
+            <!-- Simple Mobile Menu Icon (non-functional for this single-page design) --><div class="sm:hidden text-2xl text-rose-light">
+                &#9776;
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section --><header id="home" class="h-screen flex items-center justify-center text-center bg-rose-pale py-20 px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-5xl md:text-7xl brand-font text-rose-light mb-4 leading-tight">
+                Bliss Basket
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-gray-600 mb-8 tracking-wider">
+                From Our Heart To Your Home
+            </p>
+            <p class="text-lg text-gray-700 mb-10">
+                Curated, personalized gifting solutions for every special occasion. Let us craft the perfect surprise.
+            </p>
+            <a href="#products" class="inline-block px-8 py-3 bg-rose-light text-white text-lg font-semibold rounded-full shadow-lg hover:bg-rose-400 transition duration-300 transform hover:scale-105">
+                Explore Baskets
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. About Us Section (Based on IMG-20251028-WA0000.jpg) --><section id="about" class="py-16 md:py-24 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl brand-font text-rose-light mb-8">
+                Our Mission
+            </h2>
+            <div class="bg-white p-8 rounded-xl shadow-2xl shadow-rose-200">
+                <div class="text-6xl text-rose-light mb-6 inline-block p-4 rounded-full border-2 border-rose-light/50">
+                    <span style="font-family:serif;">BB</span>
+                </div>
+                <p class="text-xl leading-relaxed text-gray-700">
+                    We deliver gifting for **Corporate Client gifts**, **Festival gifts**, **Personalized gifts**, and many more with discounts and offers on festive occasions.
+                </p>
+                <p class="mt-6 text-lg font-medium text-gray-600">
+                    Our joy is connecting hearts through beautifully assembled, thoughtful gifts.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Product Gallery Section (Updated with 4 images) --><section id="products" class="bg-rose-pale py-16 md:py-24 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl brand-font text-rose-light text-center mb-12">
+                Our Curated Collections
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+
+                <!-- Product Card 1: The Golden Indulgence (IMG-20251028-WA0004.jpg) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="/IMG-20251028-WA0018.jpg" 
+                         alt="Elegant gift basket with wine, chocolates, and golden roses" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/383838/FFD700?text=The+Golden+Indulgence';"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold text-rose-light mb-2">The Golden Indulgence</h3>
+                        <p class="text-gray-600 mb-4">
+                            A sophisticated basket featuring fine wine, gourmet chocolates, and elegant golden rose accents, beautifully presented in a metal basket. Perfect for anniversaries or luxury gifting.
+                        </p>
+                        <span class="inline-block bg-rose-pale text-rose-light text-xs font-semibold px-3 py-1 rounded-full">
+                            #LuxuryGifts #Anniversary
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: The Serenity Basket (IMG-20251028-WA0001.jpg) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="/IMG-20251028-WA0019.jpg" 
+                         alt="Gift basket with potted plants, chocolates, and fairy lights" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/f7e6e9/d8969f?text=The+Serenity+Basket';"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold text-rose-light mb-2">The Serenity Basket</h3>
+                        <p class="text-gray-600 mb-4">
+                            A delightful combination of low-maintenance indoor plants, decorative candles, and premium Cadbury chocolates. Presented in a light wooden tray, it's perfect for housewarmings or thank you gifts.
+                        </p>
+                        <span class="inline-block bg-rose-pale text-rose-light text-xs font-semibold px-3 py-1 rounded-full">
+                            #PlantLove #Housewarming
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: The Executive Box (IMG-20251028-WA0002.jpg) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="/IMG-20251028-WA0020.jpg" 
+                         alt="Gift basket with miniature spirits, plants, and snacks" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/e9dff7/9a6cdb?text=The+Executive+Box';"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold text-rose-light mb-2">The Executive Box</h3>
+                        <p class="text-gray-600 mb-4">
+                            A curated selection of premium miniature spirits (Whiskey, Vodka, Jägermeister), decadent snacks, and a hint of green. Ideal for corporate clients or milestone celebrations.
+                        </p>
+                        <span class="inline-block bg-rose-pale text-rose-light text-xs font-semibold px-3 py-1 rounded-full">
+                            #CorporateGifts #Celebration
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Product Card 4: The Birthday Bliss (IMG-20251028-WA0003.jpg) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <img src="/IMG-20251028-WA0021.jpg" 
+                         alt="Charming birthday gift basket with teddy, lights, and sweets" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x600/c7eafc/6bbce4?text=The+Birthday+Bliss';"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-semibold text-rose-light mb-2">The Birthday Bliss</h3>
+                        <p class="text-gray-600 mb-4">
+                            A charming birthday basket filled with a cute teddy bear, sparkling fairy lights, a rainbow topper, and an assortment of sweet treats. A perfect joyful surprise!
+                        </p>
+                        <span class="inline-block bg-rose-pale text-rose-light text-xs font-semibold px-3 py-1 rounded-full">
+                            #BirthdayGifts #JoyfulSurprise
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Call to Action / Contact Section --><section id="contact" class="py-16 md:py-24 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl brand-font text-rose-light mb-6">
+                Ready to Order?
+            </h2>
+            <p class="text-xl text-gray-700 mb-8">
+                For personalized requests, bulk orders, discounts, and offers, please connect with us directly.
+            </p>
+            
+            <p class="text-3xl font-bold text-rose-light mb-3">
+                Instagram DM for Orders:
+            </p>
+
+            <div class="inline-block bg-rose-pale p-5 rounded-lg shadow-xl">
+                 <a href="https://www.instagram.com/blissbasket07" target="_blank" rel="noopener noreferrer" class="text-3xl font-extrabold text-rose-light hover:text-rose-400 transition duration-300 flex items-center justify-center">
+                    <!-- Instagram Icon (Inline SVG for compliance) --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 mr-3">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    @blissbasket07
+                </a>
+            </div>
+
+            <p class="text-sm text-gray-500 mt-6">
+                We'll get back to you right away to discuss your perfect gift.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Footer --><footer class="bg-gray-100 py-6 px-4 text-center text-sm text-gray-500">
+        <p>&copy; 2025 Bliss Basket. All rights reserved. | <a href="#home" class="hover:text-rose-light">Back to Top</a></p>
+    </footer>
+
+</body>
+</html>
