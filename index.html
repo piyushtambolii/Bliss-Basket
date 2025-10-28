@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- CRITICAL: Ensures responsiveness on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bliss Basket - From Our Heart To Your Home</title>
     <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
@@ -27,23 +28,36 @@
 </head>
 <body class="text-gray-800">
 
-    <!-- Navbar --><nav class="sticky top-0 z-10 bg-white shadow-md p-4">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-10 bg-white shadow-md p-4">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <a href="#home" class="text-3xl brand-font text-rose-light font-bold">Bliss Basket</a>
-            <div class="space-x-4 text-sm font-medium hidden sm:flex">
+            <!-- Adjusted font size for better mobile fit -->
+            <a href="#home" class="text-2xl sm:text-3xl brand-font text-rose-light font-bold">Bliss Basket</a>
+            <!-- Desktop Links -->
+            <div id="desktop-menu" class="space-x-4 text-sm font-medium hidden sm:flex">
                 <a href="#about" class="hover:text-rose-light transition duration-300">About Us</a>
                 <a href="#products" class="hover:text-rose-light transition duration-300">Gallery</a>
                 <a href="#contact" class="hover:text-rose-light transition duration-300">Order</a>
             </div>
-            <!-- Simple Mobile Menu Icon (non-functional for this single-page design) --><div class="sm:hidden text-2xl text-rose-light">
-                &#9776;
-            </div>
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-button" class="sm:hidden text-2xl text-rose-light p-2 focus:outline-none">
+                <span id="menu-icon">&#9776;</span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Links (Initially hidden) -->
+        <div id="mobile-menu" class="hidden sm:hidden mt-3 pt-3 border-t border-rose-light/30">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 px-3 text-lg font-medium text-gray-700 hover:bg-rose-pale rounded-lg transition duration-300">About Us</a>
+            <a href="#products" onclick="toggleMobileMenu()" class="block py-2 px-3 text-lg font-medium text-gray-700 hover:bg-rose-pale rounded-lg transition duration-300">Gallery</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 px-3 text-lg font-medium text-gray-700 hover:bg-rose-pale rounded-lg transition duration-300">Order</a>
         </div>
     </nav>
 
-    <!-- 1. Hero Section --><header id="home" class="h-screen flex items-center justify-center text-center bg-rose-pale py-20 px-4">
+    <!-- 1. Hero Section -->
+    <header id="home" class="h-screen flex items-center justify-center text-center bg-rose-pale py-20 px-4">
         <div class="max-w-3xl">
-            <h1 class="text-5xl md:text-7xl brand-font text-rose-light mb-4 leading-tight">
+            <!-- Adjusted font size for better mobile fit -->
+            <h1 class="text-4xl md:text-7xl brand-font text-rose-light mb-4 leading-tight">
                 Bliss Basket
             </h1>
             <p class="text-xl md:text-2xl font-light text-gray-600 mb-8 tracking-wider">
@@ -58,7 +72,8 @@
         </div>
     </header>
 
-    <!-- 2. About Us Section (Based on IMG-20251028-WA0000.jpg) --><section id="about" class="py-16 md:py-24 px-4">
+    <!-- 2. About Us Section (Based on IMG-20251028-WA0000.jpg) -->
+    <section id="about" class="py-16 md:py-24 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl brand-font text-rose-light mb-8">
                 Our Mission
@@ -77,11 +92,13 @@
         </div>
     </section>
 
-    <!-- 3. Product Gallery Section (Updated with 4 images) --><section id="products" class="bg-rose-pale py-16 md:py-24 px-4">
+    <!-- 3. Product Gallery Section (Updated with 4 images) -->
+    <section id="products" class="bg-rose-pale py-16 md:py-24 px-4">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl brand-font text-rose-light text-center mb-12">
                 Our Curated Collections
             </h2>
+            <!-- Grid is set to 1 column on mobile and 2 columns on larger devices -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
 
                 <!-- Product Card 1: The Golden Indulgence (IMG-20251028-WA0004.jpg) -->
@@ -156,7 +173,8 @@
         </div>
     </section>
 
-    <!-- 4. Call to Action / Contact Section --><section id="contact" class="py-16 md:py-24 px-4">
+    <!-- 4. Call to Action / Contact Section -->
+    <section id="contact" class="py-16 md:py-24 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl brand-font text-rose-light mb-6">
                 Ready to Order?
@@ -170,7 +188,7 @@
             </p>
 
             <div class="inline-block bg-rose-pale p-5 rounded-lg shadow-xl">
-                 <a href="https://www.instagram.com/blissbasket07" target="_blank" rel="noopener noreferrer" class="text-3xl font-extrabold text-rose-light hover:text-rose-400 transition duration-300 flex items-center justify-center">
+                 <a href="https://www.instagram.com/__bliss_basket__?igsh=ajRvN2JyajZvbjI=" target="_blank" rel="noopener noreferrer" class="text-3xl font-extrabold text-rose-light hover:text-rose-400 transition duration-300 flex items-center justify-center">
                     <!-- Instagram Icon (Inline SVG for compliance) --><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 mr-3">
                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -190,6 +208,38 @@
     <!-- Footer --><footer class="bg-gray-100 py-6 px-4 text-center text-sm text-gray-500">
         <p>&copy; 2025 Bliss Basket. All rights reserved. | <a href="#home" class="hover:text-rose-light">Back to Top</a></p>
     </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            
+            // Toggle the 'hidden' class
+            menu.classList.toggle('hidden');
+
+            // Change the icon
+            if (menu.classList.contains('hidden')) {
+                // Menu is hidden, show hamburger
+                icon.innerHTML = '&#9776;'; // Hamburger
+            } else {
+                // Menu is visible, show close icon
+                icon.innerHTML = '&times;'; // Close 'x'
+            }
+        }
+
+        document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu);
+
+        // Optional: Close menu if screen size changes back to desktop
+        window.addEventListener('resize', function() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (window.innerWidth >= 640 && !menu.classList.contains('hidden')) { // 640px is Tailwind's 'sm' breakpoint
+                menu.classList.add('hidden');
+                icon.innerHTML = '&#9776;';
+            }
+        });
+    </script>
 
 </body>
 </html>
