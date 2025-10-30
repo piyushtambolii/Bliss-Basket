@@ -24,6 +24,51 @@
         .bg-rose-pale {
              background-color: #f7e6e9; /* Lightest pink for accents */
         }
+        
+        /* Keyframes for a subtle, periodic hop movement */
+        @keyframes whatsapp-hop {
+            0%, 40%, 100% {
+                transform: translateY(0) scale(1);
+                /* Default shadow */
+                
+            }
+            5%, 25% { /* Quick hop up and slight scale */
+                transform: translateY(-5px) scale(1.03);
+                /* Lifted shadow */
+                
+            }
+            10%, 30% {
+                 transform: translateY(0) scale(1);
+            }
+        }
+
+        /* 1. Styling for the Floating WhatsApp Button (With 3D Effect) */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+             /* WhatsApp Green */
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            transition: all 0.2s ease;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Apply the new animation, repeating every 3 seconds */
+            animation: whatsapp-hop 3s ease-in-out infinite;
+        }
+        .whatsapp-float:hover {
+             /* Slightly darker green on hover */
+            transform: translateY(-5px); /* Slight lift */
+            /* Shadow deepens slightly on hover */
+            
+            animation-play-state: paused; /* Pause animation on hover for better interaction */
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -208,8 +253,25 @@
     <!-- Footer --><footer class="bg-gray-100 py-6 px-4 text-center text-sm text-gray-500">
         <p>&copy; 2025 Bliss Basket. All rights reserved. | <a href="#home" class="hover:text-rose-light">Back to Top</a></p>
     </footer>
+    
+    <!-- 🟢 FLOATING WHATSAPP BUTTON (Animated 3D Effect) 🟢 -->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- IMPORTANT: REPLACE XXXXXXXXXX with your full WhatsApp number (e.g., 919876543210) -->
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <a href="https://wa.me/9607859127?text=Hi%2C%20I%20saw%20your%20Bliss%20Basket%20website%20and%20I%27d%20like%20to%20place%20an%20order." 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Chat with us on WhatsApp">
+        <!-- Image classes updated to remove padding, background, and rounded borders -->
+        <img src="/WhatsApp.svg.webp" 
+             alt="WhatsApp Logo" 
+             >
+             <!-- class="w-10 h-10 object-contain" -->
+    </a>
+    <!-- 🟢 END WHATSAPP BUTTON 🟢 -->
 
-    <!-- JavaScript for Mobile Menu Toggle -->
+    <!-- JavaScript for Mobile Menu Toggle (Scroll logic removed) -->
     <script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobile-menu');
