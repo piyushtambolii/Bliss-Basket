@@ -218,6 +218,48 @@
         </div>
     </section>
 
+    <section id="video-showcase" class="py-16 md:py-24 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl brand-font text-rose-light text-center mb-10">
+                A Glimpse Into the Bliss
+            </h2>
+            
+            <!-- BEAUTIFUL VIDEO CARD -->
+            <div class="bg-white p-6 md:p-10 rounded-2xl shadow-2xl shadow-rose-300/60 border-4 border-rose-light/50">
+                <p class="text-center text-xl font-medium text-gray-700 mb-6">
+                    Watch our latest unboxing and see the quality of our presentation!
+                </p>
+                
+                <!-- 
+                    Responsive Video Container: 
+                    The combination of w-full, max-w-xs (limiting desktop width), and mx-auto 
+                    perfectly centers and contains the narrow vertical 9:16 video format.
+                -->
+                <div class="w-full max-w-xs mx-auto">
+                    <!-- 
+                        CRITICAL NOTE: 
+                        To use your own video (e.g., your local MP4 file), you MUST replace the 
+                        'src' attribute below with the public URL to your video after uploading 
+                        it to your web hosting platform. Local computer paths will NOT work here.
+                    -->
+                    <video 
+                        id="unboxingVideo"
+                        controls 
+                        autoplay
+                        class="w-full h-auto object-cover rounded-lg border border-gray-200 shadow-xl"
+                        style="max-height: 80vh;"
+                    >
+                        <!-- PLACEHOLDER SOURCE - REPLACE THIS WITH YOUR VIDEO'S PUBLIC URL -->
+                        <source src="/IMG_8795.MP4" type="video/mp4">
+                        
+                        <!-- Fallback message if video format is not supported -->
+                        Your browser does not support the video tag. Please ensure your video file is hosted correctly.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 4. Call to Action / Contact Section -->
     <section id="contact" class="py-16 md:py-24 px-4">
         <div class="max-w-4xl mx-auto text-center">
@@ -268,7 +310,6 @@
     </a>
     <!-- 🟢 END WHATSAPP BUTTON 🟢 -->
 
-    
     <!-- JavaScript for Mobile Menu Toggle (Scroll logic removed) -->
     <script>
         function toggleMobileMenu() {
